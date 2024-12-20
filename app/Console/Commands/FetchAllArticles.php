@@ -79,7 +79,7 @@ class FetchAllArticles extends Command
      */
     private function fetchNewsApiArticles()
     {
-        $apiKey = '6cf929b3c09540cbb601c5701e551a5c';
+        $apiKey = 'dc704153258d45e2b780e50c673b23ac';
         $categories = ['business', 'technology', 'sports', 'health', 'entertainment'];
 
         foreach ($categories as $category) {

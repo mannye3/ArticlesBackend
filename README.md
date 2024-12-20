@@ -101,6 +101,39 @@ This project provides a RESTful API to retrieve and filter news articles based o
    php artisan serve
    ```
 
+
+## Fetching Articles
+ **Fetch articles from The the available endpoints:**
+   ```bash
+   php artisan articles:fetch
+   ```
+
+
+
+### Scheduler Configuration
+To automate article fetching, set up the Laravel Scheduler:
+
+1. Open the `app/Console/Kernel.php` file.
+2. Add the following commands to the `schedule` method:
+   ```php
+   protected function schedule(Schedule $schedule)
+   {
+        $schedule->command('articles:fetch')->everyMinute();
+   }
+   ```
+
+
+
+### Running the Scheduler
+To run the scheduler, execute the following command:
+   ```bash
+    php artisan schedule:work
+   ```
+
+---
+
+
+
 ## Testing
 
 You can use tools like Postman  to test the API endpoints.
